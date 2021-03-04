@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>100 days of (S)CSS - Project #0</title>
+    <link rel="stylesheet" href="assets/sass/style.css" />
+    <link rel="shortcut icon" href="images/Logo_transp.ico" />
+</head>
+<body>
+    <section class="menu">
+        <section class="controller">
+            <div class="controller__header-padding">
+                <h3>Header padding</h3>
+                <input type="text" onchange="PaddingHeader()" id="padding-header-input">
+                <select name="format-type" id="padding-format" onchange="PaddingHeader()">
+                    <option value="percentage">%</option>
+                    <option value="pixels">px</option>
+                    <option value="visual-width">vw</option>
+                </select>
+            </div>
+            <div class="controller__color">
+                <h3>Color picker</h3>
+                <div class="color__selected">
+                    <input type="color" id="hexadecimal-color" onchange="ColorPicker(this)">
+                    <input id="color-value" disabled="disabled" value="#000000">
+                    <img src="images/clipboard.png" onclick="CopyClipboard(document.getElementById('color-value'))">
+                </div>
+                <h5>Text</h5>
+                <input type="text" id="text-color" onchange="ChangeTextColor(this)">
+                <h5>Button</h5>
+                <input type="text" id="btn-color" onchange="ChangeCtaColor(this)">
+                <h5>Overlay</h5>
+                <input type="text" id="overlay-color" onchange="OverlayColor(this)">
+            </div>
+            <div class="controller__placement">
+                <h3>Placements</h3>
+                <h5>Title Placement</h5>
+                <h5>Subtitle Placement</h5>
+                <h5>Button Placement</h5>
+            </div>
+            <div class="controller__image">
+                <h3>Image</h3>
+                <h5>Logo image URL</h5>
+                <h5">Hero image URL</h5>
+            </div>
+            <div class="controller__device">
+                <h3>Device preview</h3>
+                <div class="device__selector">
+                    <button id="desktop" class="btn-device btn-selected" onclick="DeviceSelector(this)">
+                        <img src="images/desktop.png">
+                    </button>
+                    <button id="tablet" class="btn-device" onclick="DeviceSelector(this)">
+                        <img src="images/tablet.png">
+                    </button>
+                    <button id="mobile" class="btn-device" onclick="DeviceSelector(this)">
+                        <img src="images/mobile_size.png">
+                    </button>
+                </div>                
+            </div>
+        </section>
+    </section>
+    <section class="container">
+        <section id="website">
+            <header>
+                <nav>
+                    <a href="#" id="menu-logo"><img src=""></a>
+                    <ul id="nav-menu">
+                        <a href="#" class="menu-item"><li >HOME</li></a>
+                        <a href="#" class="menu-item"><li>BLOG</li></a>
+                        <a href="#" class="menu-item"><li>NEWS</li></a>
+                        <a href="#" class="menu-item"><li>ABOUT</li></a>
+                        <a href="#" class="menu-item"><li>CONTACT</li></a>
+                    </ul>
+                </nav>
+            </header>
+            <section class="content">
+                <section class="content__hero">
+                    <div class="hero-text">
+                        <h1 id="hero-title" class="title">You request, we solve.</h1>
+                        <h2 id="hero-subtitle" class="title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur vitae eos unde cum voluptates?</h2>
+                        <button id="hero-cta">SOLUTIONS</button>
+                    </div>                    
+                    <div id="hero-overlay"></div>
+                    <img src="images/office.jpg" alt="" id="hero-img">
+                </section>
+            </section>
+        </section>
+    </section>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
